@@ -1,0 +1,124 @@
+from tkinter import *
+from tkinter import ttk
+
+class Ventana(Frame):
+       
+    def __init__(self, master=None):
+        super().__init__(master,width=1200, height=600)
+        self.master = master
+        self.pack()
+        self.create_widgets()
+        
+    def fRegistro(self):         
+        pass
+    
+    def fActualizar(self):        
+        pass
+                 
+    def fBuscar(self):        
+        pass
+    
+    def fBorrar(self):
+        pass
+
+    def fVolverInicio(self):
+        pass
+
+    
+    def create_widgets(self):
+        ### Fragmento para Botones
+        frame1 = Frame(self, bg="#d5dbdb")
+        frame1.place(x=0,y=0, width=140 , height=420)
+        ###
+        
+        ### Fragmento para cajas de textos
+        frame2 = Frame(self, bg="")
+        frame2.place(x=140,y=0,width=200, height=420)
+        ###
+        
+    ### Menu Principal
+        self.btnRegistrar=Button(frame1,text="REGISTRO LIBRO", command=self.fRegistro, bg="#117a65", fg="white")
+        self.btnRegistrar.place(x=5,y=100,width=130, height=30)
+
+        self.btnActualizar=Button(frame1,text="ACTUALIZAR REGISTRO", command=self.fActualizar, bg="#117a65", fg="white")
+        self.btnActualizar.place(x=5,y=140,width=130, height=30)
+        
+        self.btnBuscar=Button(frame1,text="BUSCAR LIBRO", command=self.fBuscar, bg="#117a65", fg="white")
+        self.btnBuscar.place(x=5,y=180,width=130, height=30)
+
+        self.btnBorrar=Button(frame1,text="BORRAR REGISTRO", command=self.fBorrar, bg="#117a65", fg="white")
+        self.btnBorrar.place(x=5,y=220,width=130, height=30)
+
+        self.btnVolverInicio=Button(frame1,text="VOLVER INICIO", command=self.fVolverInicio, bg="#e6b0aa", fg="black")
+        self.btnVolverInicio.place(x=5,y=365,width=130, height=30)  
+    ###
+        
+    ### Panel Registrar Datos
+        lbl1 = Label(frame2,text="CODIGO:")
+        lbl1.place(x=5,y=5)    
+        self.txtCodigo=Entry(frame2)
+        self.txtCodigo.place(x=5,y=25,width=190, height=20)
+        
+        lbl2 = Label(frame2,text="CATEGORIA: ")
+        lbl2.place(x=5,y=55)        
+        self.txtCategoria=Entry(frame2)
+        self.txtCategoria.place(x=5,y=75,width=190, height=20)
+        
+        lbl3 = Label(frame2,text="EDITORIAL: ")
+        lbl3.place(x=5,y=105)        
+        self.txtEditorial=Entry(frame2)
+        self.txtEditorial.place(x=5,y=125,width=190, height=20)
+        
+        lbl4 = Label(frame2,text="TITULO: ")
+        lbl4.place(x=5,y=155)
+        self.txtTitulo=Entry(frame2)
+        self.txtTitulo.place(x=5,y=175,width=190, height=20)
+
+        lbl5 = Label(frame2,text="AUTOR: ")
+        lbl5.place(x=5,y=205)
+        self.txtCurrency=Entry(frame2)
+        self.txtCurrency.place(x=5,y=225,width=190, height=20)
+
+        lbl6 = Label(frame2,text="EDICION: ")
+        lbl6.place(x=5,y=255)
+        self.txtEdicion=Entry(frame2)
+        self.txtEdicion.place(x=5,y=275,width=190, height=20)
+
+        lbl7 = Label(frame2,text="x1: ")
+        lbl7.place(x=5,y=305)
+        self.txtx1=Entry(frame2)
+        self.txtx1.place(x=5,y=325,width=190, height=20)
+
+        lbl8 = Label(frame2,text="x2: ")
+        lbl8.place(x=5,y=355)
+        self.txtx2=Entry(frame2)
+        self.txtx2.place(x=5,y=375,width=190, height=20)
+    ###
+        
+        
+    ### Panel Tabla de Registros
+        self.grid = ttk.Treeview(self, columns=("col1","col2","col3","col4","col5","col6","col7","col8"))        
+        self.grid.column("#0",width=50)
+        self.grid.column("col1",width=50, anchor=CENTER)
+        self.grid.column("col2",width=160, anchor=CENTER)
+        self.grid.column("col3",width=50, anchor=CENTER)
+        self.grid.column("col4",width=50, anchor=CENTER)
+        self.grid.column("col5",width=50, anchor=CENTER)
+        self.grid.column("col6",width=50, anchor=CENTER)
+        self.grid.column("col7",width=50, anchor=CENTER)
+        self.grid.column("col8",width=50, anchor=CENTER)
+
+        
+        self.grid.heading("#0", text="CODIGO", anchor=CENTER)
+        self.grid.heading("col1", text="CATEGORIA", anchor=CENTER)
+        self.grid.heading("col2", text="EDITORIAL", anchor=CENTER)
+        self.grid.heading("col3", text="TITULO", anchor=CENTER)
+        self.grid.heading("col4", text="AUTOR", anchor=CENTER)
+        self.grid.heading("col5", text="EDICION", anchor=CENTER)
+        self.grid.heading("col6", text="EDICION", anchor=CENTER)
+        self.grid.heading("col7", text="EDICION", anchor=CENTER)
+        self.grid.heading("col8", text="EDICION", anchor=CENTER)
+
+        self.grid.place(x=340,y=0,width=1000, height=420)
+    ###
+        
