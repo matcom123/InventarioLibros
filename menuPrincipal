@@ -1,5 +1,4 @@
-print("Hola Mundo")
-a=2
-b=4
-c=a+b
-print("el resultado es: ", c)
+lbl1 = Label(frame2,text="CODIGO:")
+        lbl1.place(x=5,y=5)    
+        self.txtCodigo=Entry(frame2)
+        self.txtCodigo.place(x=5,y=25,width=190, height=20)
