@@ -1,3 +1,4 @@
+# Marco Registrar Datos
 lbl1 = Label(frame2,text="CODIGO:")
 lbl1.place(x=5,y=5)    
 self.txtCodigo=Entry(frame2)
