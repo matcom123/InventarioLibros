@@ -1,4 +1,4 @@
 lbl1 = Label(frame2,text="CODIGO:")
-        lbl1.place(x=5,y=5)    
-        self.txtCodigo=Entry(frame2)
-        self.txtCodigo.place(x=5,y=25,width=190, height=20)
+lbl1.place(x=5,y=5)    
+self.txtCodigo=Entry(frame2)
+self.txtCodigo.place(x=5,y=25,width=190, height=20)
